@@ -14,6 +14,8 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			
+			$typs = $text;
+			
 			switch($text){
 				case "hi" : $text = "สวัสดีครับ ยินดีต้อนรับ พิมพ์ 1  เลือกโปรโมชั่น พิมพ์  2  รับส่วนลด"; break;
 				case "1" : $text = "โปรโมชั่น".date("d m Y"); break;
@@ -24,7 +26,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			if($text==1){				
+			if($typs==1){				
 				// Build message to reply back
 				$messages = [
 					'type' 		=> 'location',
