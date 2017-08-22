@@ -14,7 +14,12 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			
-			$text = $text." Reply by Piak";
+			switch($text){
+				case "hi" : $text = "สวัสดีครับ ยินดีต้อนรับ พิมพ์ 1  เลือกโปรโมชั่น พิมพ์  2  รับส่วนลด"; break;
+				case "1" : $text = "โปรโมชั่น".date("d m Y"); break;
+				case "2" : $text = "ส่วนลดของเดือน".date("m Y"); break;
+				default : $text = $text." Reply by Piak"; break;
+			}
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
