@@ -36,6 +36,14 @@ if (!is_null($events['events'])) {
 					'longitude' 	=> '139.70372892916203'
 				];
 
+			}else if($typs=="sticker"){				
+				// Build message to reply back
+				$messages = [
+					'type' 		=> 'sticker',
+    					'packageId'	=> '1',
+    					'stickerId'	=> '1'
+				];
+
 			}else{
 				// Build message to reply back
 				$messages = [
