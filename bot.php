@@ -14,7 +14,7 @@ if (!is_null($events['events'])) {
 			// Get text sent
 			$text = $event['message']['text'];
 			
-			
+			$text = $text." Reply by Piak";
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
